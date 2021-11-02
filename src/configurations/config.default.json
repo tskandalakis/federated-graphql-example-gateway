@@ -1,0 +1,8 @@
+{
+  "port": 80,
+  "build": "",
+  "graphqlServicePaths": {
+    "user": "http://graphql-user",
+    "book": "http://graphql-user"
+  }
+}

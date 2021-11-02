@@ -1,0 +1,42 @@
+{
+  "name": "federated-graphql-example-gateway",
+  "version": "1.0.0",
+  "description": "This is the gateway service of the federated-graphql-example app.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "postbuild": "cp -R node_modules dist/node_modules",
+    "prestart": "npm run build",
+    "start": "node .",
+    "start:local": "tsc; CLUSTER_NAME=local node dist/index.js;",
+    "start:local-debug": "tsc; CLUSTER_NAME=local node --inspect dist/index.js;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tasoskandalakis@gmail.com",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@apollo/federation": "^0.33.3",
+    "@apollo/gateway": "^0.42.3",
+    "@types/morgan": "^1.9.0",
+    "apollo-server-express": "^3.4.0",
+    "apollo-server-plugin-base": "^3.3.0",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-prom-bundle": "^6.0.0",
+    "graphql": "^15.5.3",
+    "morgan": "^1.10.0",
+    "nconf": "^0.10.0",
+    "prom-client": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/express-http-proxy": "^1.6.0",
+    "@types/nconf": "^0.10.0",
+    "@types/node": "^13.11.1",
+    "tslint": "^6.1.1",
+    "typescript": "^3.8.3"
+  }
+}

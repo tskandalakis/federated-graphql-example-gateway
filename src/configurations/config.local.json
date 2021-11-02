@@ -1,0 +1,8 @@
+{
+  "port": 4000,
+  "build": "local-build",
+  "graphqlServicePaths": {
+    "user": "http://localhost:4001",
+    "book": "http://localhost:4002"
+  }
+}
