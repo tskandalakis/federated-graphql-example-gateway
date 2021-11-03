@@ -41,7 +41,7 @@ export async function init(config: any): Promise<Express.Application> {
     const gateway = new ApolloGateway({
       serviceList: [
         { name: 'user', url: `${config.graphqlServicePaths.user}/graphql` },
-        // { name: 'book', url: `${config.graphqlServicePaths.book}/graphql` },
+        { name: 'book', url: `${config.graphqlServicePaths.book}/graphql` },
         // Define additional services here
       ],
       buildService({ name, url }) {
